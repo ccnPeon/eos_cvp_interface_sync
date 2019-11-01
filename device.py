@@ -9,11 +9,11 @@ class Device():
         self.username = username
         self.password = password
         self.interface_list = []
-        self.get_device_info()
-        self.get_interface_list()
-        self.get_interface_configs()
+        self._get_device_info()
+        self._get_interface_list()
+        self._get_interface_configs()
 
-    def get_device_info(self):
+    def _get_device_info(self):
         data = {
         "jsonrpc": "2.0",
         "method": "runCmds",
@@ -38,7 +38,7 @@ class Device():
         self.fqdn = hostname['fqdn']
 
     
-    def get_interface_list(self):
+    def _get_interface_list(self):
         data = {
         "jsonrpc": "2.0",
         "method": "runCmds",
@@ -63,7 +63,7 @@ class Device():
                 self.interface_list.append(interface)
 
 
-    def get_interface_configs(self):
+    def _get_interface_configs(self):
         
         commands = ["enable"]
         
