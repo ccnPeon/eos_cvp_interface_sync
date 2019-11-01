@@ -3,6 +3,8 @@ The purpose of this script will be to get the interface running configuration fr
 
 The script will prompt for your CVP username/password upon execution. This will be the user that is notated in the creation of the CVP Task. The task will not be execute and should not perform a change on the interfaces.
 
+This script will also copy running configuration to startup
+
 ### Prerequisites
 * CVP Configlet that matches the name of <switch_hostname>_Interfaces
 
