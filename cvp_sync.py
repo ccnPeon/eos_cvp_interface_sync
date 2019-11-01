@@ -9,7 +9,7 @@ from device import Device
 ###################Define Global Variables###################
 username = raw_input('Please enter your username: ')
 password = getpass('Please enter your password: ')
-cvp_server = '10.0.0.14'
+cvp_server = 'cvpserver'
 api_headers = {
     'Content-Type': "application/json",
     'cache-control': "no-cache",

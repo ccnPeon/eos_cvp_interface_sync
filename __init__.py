@@ -1,2 +1,2 @@
-__version__ = 'develop'
-__author__ = 'bg'
+__version__ = '1.0'
+__author__ = 'ccnPeon' 
