@@ -12,6 +12,7 @@ The script will prompt for your CVP username/password upon execution. This will 
 #### 3. Create an alias on the switch with the following command:
 * alias <chosen_alias> bash sudo ip netns exec ns-<management_vrf> python /mnt/flash/eos_cvp_interface_sync/cvp_sync.py'
 * Note: In my example I will use the alias 'syncconfig' with the management vrf of 'MGMT'
+* Example alias: alias syncconfig bash sudo ip netns exec ns-MGMT python /mnt/flash/eos_cvp_sync/cvp_sync.py
 
 
 ### Example
