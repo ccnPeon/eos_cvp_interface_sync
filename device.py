@@ -30,7 +30,7 @@ class Device():
         "id": "EapiExplorer-1"
         } 
         
-        response = requests.post(url='http://{0}:{1}@127.0.0.1/command-api'.format(self.username,self.password), data=json.dumps(data), verify=False)
+        response = requests.post(url='https://{0}:{1}@127.0.0.1/command-api'.format(self.username,self.password), data=json.dumps(data), verify=False)
         device_info = json.loads(response.content)['result'][2]
         hostname = json.loads(response.content)['result'][3]
         
@@ -55,7 +55,7 @@ class Device():
         "id": "EapiExplorer-1"
         } 
         
-        response = requests.post(url='https://{0}:{1}@10.255.255.201/command-api'.format(self.username,self.password), data=json.dumps(data), verify=False)
+        response = requests.post(url='https://{0}:{1}@127.0.0.1/command-api'.format(self.username,self.password), data=json.dumps(data), verify=False)
         interfaces_dict = json.loads(response.content)['result'][0]['interfaceStatuses']
 
         for interface in interfaces_dict:
@@ -84,7 +84,7 @@ class Device():
         "id": "EapiExplorer-1"
         } 
 
-        response = requests.post(url='https://{0}:{1}@10.255.255.201/command-api'.format(self.username,self.password), data=json.dumps(data), verify=False)
+        response = requests.post(url='https://{0}:{1}@127.0.0.1/command-api'.format(self.username,self.password), data=json.dumps(data), verify=False)
         configs = json.loads(response.content)['result']
 
         self.final_config = ""
